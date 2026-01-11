@@ -49,7 +49,7 @@ class TestMonoalphabeticCipher(unittest.TestCase):
         self.assertEqual(decrypted, plaintext)
 
     def test_break_simple_cipher(self):
-        plaintext = "This is a simple test message"
+        plaintext = "This is a simple test message. The length has been increased such that it is long enough to break."
         shift = 5
         ciphertext = monoalphabetic.encrypt(plaintext, shift)
 
@@ -59,7 +59,7 @@ class TestMonoalphabeticCipher(unittest.TestCase):
         self.assertEqual(recovered_text, plaintext)
 
     def test_break_with_mixed_case(self):
-        plaintext = "Hello World"
+        plaintext = "Hello World is a classic phrase in programming. It serves as demonstration that some text can be printed."
         shift = 3
         ciphertext = monoalphabetic.encrypt(plaintext, shift)
 
